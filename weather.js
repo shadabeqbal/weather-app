@@ -6,7 +6,7 @@ var city = args._[0];
 
 (async() => {
     try {
-        const { body } = await got.post('http://api.openweathermap.org/data/2.5/weather?q=' + `${city}` + '&appid=1831631de8bcbf457caa264fdd9cdc5d')
+        const { body } = await got.post('http://api.openweathermap.org/data/2.5/weather?q=' + `${city}` + '&appid={API KEY}')
         var report = JSON.parse(body);
         console.log(report);
     } catch (error) {
